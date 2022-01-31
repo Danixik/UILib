@@ -150,7 +150,7 @@ function library:Window(name)
         Togglebutton.Font = Enum.Font.SourceSans
         Togglebutton.Text = ""
         Togglebutton.TextColor3 = Color3.fromRGB(0, 0, 0)
-        Togglebutton.TextSize = 14.000
+        Togglebutton.TextSize = UDim2.new(0,textbound.x,0,whateverurypositionis)
 
         local function Fire()
             toggled = not toggled
