@@ -1,3 +1,4 @@
+repeat wait() until game.Players.LocalPlayer.Character 
 local library = {}
 
 function library:Window(name)
