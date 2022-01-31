@@ -93,7 +93,6 @@ function library:Window(name)
     end
 
     function library:CreateLabel(titleLabel)
-        local callback = callback or function() end
         local TextLabel = Instance.new("TextLabel")
 
         TextLabel.Parent = Container
