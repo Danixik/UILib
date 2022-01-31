@@ -110,5 +110,56 @@ function library:Window(name)
         TextLabel.Text = titleLabel
         TextLabel.TextXAlignment = Enum.TextXAlignment.Left
     end
+
+    function library:CreateToggle(titleToggle, callback)
+        local actions = {}
+        local toggled = false
+        local callback = callback or function() end
+        local Toggle = Instance.new("TextLabel")
+        local BackroundToggle = Instance.new("Frame")
+        local Togglebutton = Instance.new("TextButton")
+
+        Toggle.Name = "Toggle"
+        Toggle.Parent = Container
+        Toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        Toggle.BackgroundTransparency = 1.000
+        Toggle.BorderSizePixel = 0
+        Toggle.Position = UDim2.new(0.00224215258, 0, 0.110679612, 0)
+        Toggle.Size = UDim2.new(0, 80, 0, 25)
+        Toggle.Font = Enum.Font.Gotham
+        Toggle.Text = titleToggle
+        Toggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+        Toggle.TextSize = 14.000
+        Toggle.TextXAlignment = Enum.TextXAlignment.Left
+
+        BackroundToggle.Name = "BackroundToggle"
+        BackroundToggle.Parent = Toggle
+        BackroundToggle.AnchorPoint = Vector2.new(0.5, 0.5)
+        BackroundToggle.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+        BackroundToggle.BorderColor3 = Color3.fromRGB(255, 220, 138)
+        BackroundToggle.Position = UDim2.new(0.800000012, 0, 0.5, 0)
+        BackroundToggle.Size = UDim2.new(0, 17, 0, 17)
+
+        Togglebutton.Name = "Togglebutton"
+        Togglebutton.Parent = BackroundToggle
+        Togglebutton.AnchorPoint = Vector2.new(0.5, 0.5)
+        Togglebutton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+        Togglebutton.BorderColor3 = Color3.fromRGB(40, 40, 40)
+        Togglebutton.Position = UDim2.new(0.5, 0, 0.5, 0)
+        Togglebutton.Size = UDim2.new(0, 15, 0, 15)
+        Togglebutton.Font = Enum.Font.SourceSans
+        Togglebutton.Text = ""
+        Togglebutton.TextColor3 = Color3.fromRGB(0, 0, 0)
+        Togglebutton.TextSize = 14.000
+
+        local function Fire()
+            toggled = not toggled
+            pcall(callback, toggled)
+        end
+
+        Togglebutton.MouseButton1Click:Connect(Fire)
+
+        end)
+    end
 end
 return library
