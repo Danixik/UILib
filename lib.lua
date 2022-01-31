@@ -1,6 +1,5 @@
 local library = {}
 local UIS = game:GetService("UserInputService")
-local opened = false
 
 UIS.InputBegan:Connect(function(Skid)
     if Skid.KeyCode == Enum.KeyCode.Insert then
