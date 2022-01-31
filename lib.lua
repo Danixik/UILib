@@ -23,6 +23,8 @@ function library:Window(name)
     Backround.BorderColor3 = Color3.fromRGB(0, 0, 0)
     Backround.Position = UDim2.new(0.5, 0, 0.5, 0)
     Backround.Size = UDim2.new(0, 452, 0, 552)
+    Backround.Active = true
+    Backround.Draggable = true
 
     Main.Name = "Main"
     Main.Parent = Backround
@@ -31,8 +33,6 @@ function library:Window(name)
     Main.BorderColor3 = Color3.fromRGB(45, 45, 45)
     Main.Position = UDim2.new(0.5, 0, 0.5, 0)
     Main.Size = UDim2.new(0, 450, 0, 550)
-    Main.Active = true
-    Main.Draggable = true
 
     Underline.Name = "Underline"
     Underline.Parent = Main
