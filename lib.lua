@@ -167,4 +167,3 @@ function library:Window(name)
         end
 end
    return library
-]]
