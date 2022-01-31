@@ -1,13 +1,4 @@
 local library = {}
-local UIS = game:GetService("UserInputService")
-local opened = false
-
-UIS.InputBegan:Connect(function(Skid)
-    if Skid.KeyCode == Enum.KeyCode.Insert then
-        Backround.Visible = true
-    else
-        Backround.Visible = false
-end)
 
 function library:Window(name)
     local UILib = Instance.new("ScreenGui")
@@ -39,8 +30,7 @@ function library:Window(name)
     Main.BorderColor3 = Color3.fromRGB(45, 45, 45)
     Main.Position = UDim2.new(0.5, 0, 0.5, 0)
     Main.Size = UDim2.new(0, 450, 0, 550)
-    Main.Active = true
-    Main.Draggable = true
+    
 
     Underline.Name = "Underline"
     Underline.Parent = Main
@@ -87,8 +77,9 @@ function library:Window(name)
     UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
     UIListLayout.Padding = UDim.new(0, 5)
 
-    function library:CreateButton(titleButton)
+    function library:CreateButton(titleButton, callback)
         local TextButton = Instance.new("TextButton")
+        local callback = callback or function() end
 
         TextButton.Parent = Container
         TextButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
@@ -101,7 +92,7 @@ function library:Window(name)
         TextButton.Text = titleButton
     end
 
-    function library:CreateLabel(titleLabel, callback)
+    function library:CreateLabel(titleLabel)
         local callback = callback or function() end
         local TextLabel = Instance.new("TextLabel")
 
