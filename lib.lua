@@ -108,8 +108,6 @@ function library:Window(name)
         TextLabel.Text = titleLabel
     end
 end
-return library
-
 
 local UIS = game:GetService("UserInputService")
 
@@ -119,3 +117,4 @@ local UIS = game:GetService("UserInputService")
         else
             Backround.Visible = false
     end)
+return library
