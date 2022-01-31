@@ -80,7 +80,8 @@ function library:Window(name)
     UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
     UIListLayout.Padding = UDim.new(0, 5)
 
-    function library:CreateButton(titleButton)
+    function library:CreateButton(titleButton, callback)
+        local callback = callback or function() end
         local TextButton = Instance.new("TextButton")
 
         TextButton.Parent = Container
@@ -94,8 +95,7 @@ function library:Window(name)
         TextButton.Text = titleButton
     end
 
-    function library:CreateLabel(titleLabel, callback)
-        local callback = callback or function() end
+    function library:CreateLabel(titleLabel)
         local TextLabel = Instance.new("TextLabel")
 
         TextLabel.Parent = Container
