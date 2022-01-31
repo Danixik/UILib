@@ -137,7 +137,7 @@ function library:Window(name)
         BackroundToggle.AnchorPoint = Vector2.new(0.5, 0.5)
         BackroundToggle.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
         BackroundToggle.BorderColor3 = Color3.fromRGB(255, 220, 138)
-        BackroundToggle.Position = UDim2.new(0.800000012, 0, 0.5, 0)
+        BackroundToggle.Position = UDim2.new(0.8, 0, 0.52, 0)
         BackroundToggle.Size = UDim2.new(0, 17, 0, 17)
 
         Togglebutton.Name = "Togglebutton"
@@ -154,6 +154,7 @@ function library:Window(name)
 
         local function Fire()
             toggled = not toggled
+            Togglebutton.BackgroundColor3 = toggled and Color3.new(37, 198, 42) or Color3.new(30, 30, 30)
             pcall(callback, toggled)
         end
 
