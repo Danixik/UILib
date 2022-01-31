@@ -90,6 +90,9 @@ function library:Window(name)
         TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
         TextButton.TextSize = 16.000
         TextButton.Text = titleButton
+        TextButton.MouseButton1Click:Connect(function()
+            pcall(callback)
+        end)
     end
 
     function library:CreateLabel(titleLabel)
