@@ -104,4 +104,5 @@ function library:Window(name)
         TextLabel.TextSize = 16.000
         TextLabel.Text = titleLabel
     end
+    return library
 end
