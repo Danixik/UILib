@@ -1,5 +1,4 @@
 repeat wait() until game:IsLoaded()
-print("LOADING UI...")
 local library = {}
 
 function library:Window(name)
@@ -106,7 +105,5 @@ function library:Window(name)
         TextLabel.TextSize = 16.000
         TextLabel.Text = titleLabel
     end
-    print("DONE LOADING!")
-
 end
 return library
