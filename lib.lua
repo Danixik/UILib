@@ -162,7 +162,6 @@ function library:Window(name)
             function actions:Set(arg)
                 pcall(callback, arg)
             end
-        end)
+        end
     end
-end
 return library
