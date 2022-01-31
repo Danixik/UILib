@@ -124,13 +124,13 @@ function library:Window(name)
         Toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         Toggle.BackgroundTransparency = 1.000
         Toggle.BorderSizePixel = 0
-        Toggle.Position = UDim2.new(0,Toggle.TextBounds.X,0,0.110679612)
         Toggle.Size = UDim2.new(0, 80, 0, 25)
         Toggle.Font = Enum.Font.Gotham
         Toggle.Text = titleToggle
         Toggle.TextColor3 = Color3.fromRGB(255, 255, 255)
         Toggle.TextSize = 14.000
         Toggle.TextXAlignment = Enum.TextXAlignment.Left
+        Toggle.Position = UDim2.new(0,Toggle.TextBounds.X,0,0.110679612)
 
         BackroundToggle.Name = "BackroundToggle"
         BackroundToggle.Parent = Toggle
