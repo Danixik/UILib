@@ -18,6 +18,7 @@ function library:Window(name)
 
     Backround.Name = "Backround"
     Backround.Parent = UILib
+    Backround.Visible = true
     Backround.AnchorPoint = Vector2.new(0.5, 0.5)
     Backround.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
     Backround.BorderColor3 = Color3.fromRGB(0, 0, 0)
