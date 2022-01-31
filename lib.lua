@@ -1,4 +1,5 @@
 local library = {}
+local UIS = game:GetService("UserInputService")
 
 function library:Window(name)
     local UILib = Instance.new("ScreenGui")
@@ -108,13 +109,11 @@ function library:Window(name)
         TextLabel.Text = titleLabel
     end
 end
-
-local UIS = game:GetService("UserInputService")
-
     UIS.InputBegan:Connect(function(Skid)
         if Skid.KeyCode == Enum.KeyCode.Insert then
             Backround.Visible = true
         else
             Backround.Visible = false
-    end)
+    end
+end)
 return library
