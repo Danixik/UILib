@@ -130,14 +130,14 @@ function library:Window(name)
         Toggle.TextColor3 = Color3.fromRGB(255, 255, 255)
         Toggle.TextSize = 14.000
         Toggle.TextXAlignment = Enum.TextXAlignment.Left
-        Toggle.Position = UDim2.new(0,Toggle.TextBounds.X,0,0.110679612)
+        wait()
 
         BackroundToggle.Name = "BackroundToggle"
         BackroundToggle.Parent = Toggle
         BackroundToggle.AnchorPoint = Vector2.new(0.5, 0.5)
         BackroundToggle.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
         BackroundToggle.BorderColor3 = Color3.fromRGB(255, 220, 138)
-        BackroundToggle.Position = UDim2.new(0.8, 0, 0.52, 0)
+        BackroundToggle.Position = UDim2.new(0, Toggle.TextBounds.X+15, 0.52, 0)
         BackroundToggle.Size = UDim2.new(0, 17, 0, 17)
 
         Togglebutton.Name = "Togglebutton"
@@ -167,3 +167,4 @@ function library:Window(name)
         end
 end
    return library
+]]
