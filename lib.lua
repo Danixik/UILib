@@ -32,15 +32,6 @@ function library:Window(name)
     Main.Size = UDim2.new(0, 450, 0, 550)
     Main.Active = true
     Main.Draggable = true
-    
-    local UIS = game:GetService("UserInputService")
-
-    UIS.InputBegan:Connect(function(Skid)
-        if Skid.KeyCode == Enum.KeyCode.Insert then
-            Backround.Visible = true
-        else
-            Backround.Visible = false
-    end)
 
     Underline.Name = "Underline"
     Underline.Parent = Main
@@ -116,5 +107,15 @@ function library:Window(name)
         TextLabel.TextSize = 16.000
         TextLabel.Text = titleLabel
     end
-    return library
 end
+return library
+
+
+local UIS = game:GetService("UserInputService")
+
+    UIS.InputBegan:Connect(function(Skid)
+        if Skid.KeyCode == Enum.KeyCode.Insert then
+            Backround.Visible = true
+        else
+            Backround.Visible = false
+    end)
