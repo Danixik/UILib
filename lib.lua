@@ -146,11 +146,11 @@ function library:Window(name)
         Togglebutton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
         Togglebutton.BorderColor3 = Color3.fromRGB(40, 40, 40)
         Togglebutton.Position = UDim2.new(0.5, 0, 0.5, 0)
-        Togglebutton.Size = UDim2.new(0, 15, 0, 15)
+        Togglebutton.Size = UDim2.new(0,TextLabel.TextBounds.X,0,15)
         Togglebutton.Font = Enum.Font.SourceSans
         Togglebutton.Text = ""
         Togglebutton.TextColor3 = Color3.fromRGB(0, 0, 0)
-        Togglebutton.TextSize = UDim2.new(0,textbound.x,0,whateverurypositionis)
+        Togglebutton.TextSize = 14
 
         local function Fire()
             toggled = not toggled
