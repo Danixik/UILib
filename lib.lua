@@ -163,5 +163,5 @@ function library:Window(name)
                 pcall(callback, arg)
             end
         end
-    end
-return library
+end
+   return library
