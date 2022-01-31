@@ -161,6 +161,7 @@ function library:Window(name)
         Togglebutton.MouseButton1Click:Connect(Fire)
 
             function actions:Set(arg)
+                Togglebutton.BackgroundColor3 = toggled and Color3.new(37, 198, 42) or Color3.new(30, 30, 30)
                 pcall(callback, arg)
             end
         end
