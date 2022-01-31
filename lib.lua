@@ -1,4 +1,3 @@
-repeat wait() until game:IsLoaded()
 local library = {}
 
 function library:Window(name)
