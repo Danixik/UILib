@@ -159,6 +159,9 @@ function library:Window(name)
 
         Togglebutton.MouseButton1Click:Connect(Fire)
 
+            function actions:Set(arg)
+                pcall(callback, arg)
+            end
         end)
     end
 end
