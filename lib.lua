@@ -1,5 +1,4 @@
 local library = {}
-local UIS = game:GetService("UserInputService")
 
 function library:Window(name)
     local UILib = Instance.new("ScreenGui")
@@ -24,9 +23,7 @@ function library:Window(name)
     Backround.BorderColor3 = Color3.fromRGB(0, 0, 0)
     Backround.Position = UDim2.new(0.5, 0, 0.5, 0)
     Backround.Size = UDim2.new(0, 452, 0, 552)
-    Backround.Active = true
-    Backround.Draggable = true
-
+    
     Main.Name = "Main"
     Main.Parent = Backround
     Main.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -110,11 +107,4 @@ function library:Window(name)
         TextLabel.Text = titleLabel
     end
 end
-    UIS.InputBegan:Connect(function(Skid)
-        if Skid.KeyCode == Enum.KeyCode.Insert then
-            Backround.Visible = true
-        else
-            Backround.Visible = false
-    end
-end)
 return library
