@@ -50,11 +50,11 @@ function library:Window(name)
     NameLib.BackgroundTransparency = 1.000
     NameLib.BorderSizePixel = 0
     NameLib.Position = UDim2.new(0.0130000003, 0, 0, 0)
-    NameLib.Size = UDim2.new(0, 300, 0, 25)
+    NameLib.Size = UDim2.new(0, 145, 0, 25)
     NameLib.Font = Enum.Font.Gotham
     NameLib.Text = name
     NameLib.TextColor3 = Color3.fromRGB(255, 255, 255)
-    NameLib.TextSize = 18.000
+    NameLib.TextSize = 17.000
     NameLib.TextStrokeTransparency = 0.900
     NameLib.TextXAlignment = Enum.TextXAlignment.Left
 
