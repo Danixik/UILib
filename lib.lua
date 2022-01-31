@@ -1,4 +1,13 @@
 local library = {}
+local UIS = game:GetService("UserInputService")
+local opened = false
+
+UIS.InputBegan:Connect(function(Skid)
+    if Skid.KeyCode == Enum.KeyCode.Insert then
+        Backround.Visible = true
+    else
+        Backround.Visible = false
+end)
 
 function library:Window(name)
     local UILib = Instance.new("ScreenGui")
@@ -17,13 +26,12 @@ function library:Window(name)
 
     Backround.Name = "Backround"
     Backround.Parent = UILib
-    Backround.Visible = true
     Backround.AnchorPoint = Vector2.new(0.5, 0.5)
     Backround.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
     Backround.BorderColor3 = Color3.fromRGB(0, 0, 0)
     Backround.Position = UDim2.new(0.5, 0, 0.5, 0)
     Backround.Size = UDim2.new(0, 452, 0, 552)
-    
+
     Main.Name = "Main"
     Main.Parent = Backround
     Main.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -31,6 +39,8 @@ function library:Window(name)
     Main.BorderColor3 = Color3.fromRGB(45, 45, 45)
     Main.Position = UDim2.new(0.5, 0, 0.5, 0)
     Main.Size = UDim2.new(0, 450, 0, 550)
+    Main.Active = true
+    Main.Draggable = true
 
     Underline.Name = "Underline"
     Underline.Parent = Main
@@ -77,8 +87,7 @@ function library:Window(name)
     UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
     UIListLayout.Padding = UDim.new(0, 5)
 
-    function library:CreateButton(titleButton, callback)
-        local callback = callback or function() end
+    function library:CreateButton(titleButton)
         local TextButton = Instance.new("TextButton")
 
         TextButton.Parent = Container
@@ -92,17 +101,19 @@ function library:Window(name)
         TextButton.Text = titleButton
     end
 
-    function library:CreateLabel(titleLabel)
+    function library:CreateLabel(titleLabel, callback)
+        local callback = callback or function() end
         local TextLabel = Instance.new("TextLabel")
 
         TextLabel.Parent = Container
         TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         TextLabel.BackgroundTransparency = 1.000
+        TextLabel.TextXAlignment = Enum.TextXAlignment.Left
         TextLabel.BorderSizePixel = 0
         TextLabel.Position = UDim2.new(0.00224215258, 0, 0.0563106798, 0)
-        TextLabel.Size = UDim2.new(0, 446, 0, 25)
+        TextLabel.Size = UDim2.new(0, 250, 0, 25)
         TextLabel.Font = Enum.Font.Gotham
-        TextLabel.TextColor3 = Color3.fromRGB(253, 253, 253)
+        TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
         TextLabel.TextSize = 16.000
         TextLabel.Text = titleLabel
     end
