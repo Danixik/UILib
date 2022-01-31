@@ -98,7 +98,6 @@ function library:Window(name)
         TextLabel.Parent = Container
         TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         TextLabel.BackgroundTransparency = 1.000
-        TextLabel.TextXAlignment = Enum.TextXAlignment.Left
         TextLabel.BorderSizePixel = 0
         TextLabel.Position = UDim2.new(0.00224215258, 0, 0.0563106798, 0)
         TextLabel.Size = UDim2.new(0, 250, 0, 25)
@@ -106,6 +105,7 @@ function library:Window(name)
         TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
         TextLabel.TextSize = 16.000
         TextLabel.Text = titleLabel
+        TextLabel.TextXAlignment = Enum.TextXAlignment.Left
     end
 end
 return library
