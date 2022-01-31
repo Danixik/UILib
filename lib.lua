@@ -29,7 +29,7 @@ function library:Window(name)
     Main.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
     Main.BorderColor3 = Color3.fromRGB(45, 45, 45)
     Main.Position = UDim2.new(0.5, 0, 0.5, 0)
-    Main.Size = UDim2.new(0, 450, 0, 550)
+    Main.Size = UDim2.new(0, 448, 0, 548)
 
     Underline.Name = "Underline"
     Underline.Parent = Main
